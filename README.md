@@ -86,8 +86,7 @@ whole days preserves the intra-day correlation structure.
 ├── scripts/
 │   ├── run_dispatch.jl              # main result: optimal dispatch + figures
 │   └── storage_capacity_sweep.jl    # minimum-capacity bisection + cost curve
-├── figures/                         # generated figures
-└── report/                          # LaTeX source and PDF of the technical report
+└── figures/                         # generated figures
 ```
 
 ## Getting started
@@ -114,13 +113,6 @@ using Gurobi
 result = solve_dispatch(demand, wind_availability, solar_availability;
                         optimizer = Gurobi.Optimizer)
 ```
-
-## Report
-
-A full write-up — formulation, availability modeling, case-study results, and
-the storage-capacity sensitivity analysis — is in
-[`report/report.pdf`](report/report.pdf) (LaTeX source alongside; build with
-`pdflatex report.tex`).
 
 ## Citation
 

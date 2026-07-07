@@ -32,7 +32,7 @@ plt = plot(hours, forecast.mean;
     marker = :circle, markersize = 3,
     label = "Mean forecast (band: ±1.5 std)",
     xlabel = "Hour of the day", ylabel = "Wind availability (% of capacity)",
-    xticks = [1, 4, 8, 12, 16, 20, 24], ylims = (0, 100), legend = :top)
+    xticks = [1, 4, 8, 12, 16, 20, 24], ylims = (0, 100), legend = :outertop)
 savefig(plt, joinpath(FIGURES_DIR, "wind_forecast.png"))
 
 # --- Solve the dispatch LP
@@ -46,7 +46,7 @@ show(stdout, result.dispatch; allrows = true, allcols = true)
 
 # --- Dispatch figure: power balance (top) and storage state of charge (bottom)
 p1 = plot(hours, demand; color = :black, linewidth = 2.5, label = "Demand",
-    ylabel = "Power (MW)", legend = :topleft)
+    ylabel = "Power (MW)", legend = :outertop, legend_columns = 2)
 plot!(p1, hours, result.dispatch.wind_MW; color = :steelblue, linewidth = 2,
     label = "Wind")
 plot!(p1, hours, result.dispatch.solar_MW; color = :orange, linewidth = 2,
