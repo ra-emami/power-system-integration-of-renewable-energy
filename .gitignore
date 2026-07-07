@@ -1,0 +1,15 @@
+# Julia
+Manifest.toml
+
+# LaTeX build artifacts
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.synctex.gz
+report/*.fls
+report/*.fdb_latexmk
+
+# OS
+.DS_Store
+Thumbs.db
