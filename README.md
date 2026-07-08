@@ -33,7 +33,9 @@ Decision variables per hour $h$: wind output $P^W_h$, solar output $P^S_h$,
 storage discharge $P^{dis}_h \ge 0$, and storage charge $P^{ch}_h \ge 0$.
 
 $$
-\min \; \sum_{h=1}^{24} \left( C^W_h P^W_h + C^S_h P^S_h + c_{\mathrm{deg}} P^{dis}_h \right)
+\begin{aligned}
+\min \quad \sum_{h=1}^{24} \left( C^W_h P^W_h + C^S_h P^S_h + c_{\mathrm{deg}} P^{dis}_h \right)
+\end{aligned}
 $$
 
 subject to, for every hour $h$:
